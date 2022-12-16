@@ -2,8 +2,10 @@ SPECIAL = "!@#$%^&*()-+."
 UPPER = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 LOWER = ("abcdefghijklmnopqrstuvwxyz")
 
+
 def main():
-    ...
+    
+  ...  
 
 def check_length(pswd):
     l = len(pswd)
@@ -29,12 +31,23 @@ def check_lower(pswd):
     return False
 
 
-def check_digit():
-    ...
+def check_digit(password):
+    
+    for char in password:
+        if char.isdigit():
+            return True
+    return False
 
 
-def check_special():
-    ...
+
+def check_special(password):
+    
+    for sp in password:
+        if sp in SPECIAL:
+            return True
+    return False
+
+    
 
 
 # TO-DO
