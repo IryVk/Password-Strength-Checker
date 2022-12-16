@@ -55,9 +55,8 @@ def check_unique(usr, pswd):
         try:
             if pswd[i : i + 4].lower() in usr.lower():
                 return False
-        except IndexError:
-            break
-    return True
+        except IndexError:  # Once it reaches end of password i.e. raises index error, return
+            return True
 
 
 # Checks if passowrd is not in list of common passwords
