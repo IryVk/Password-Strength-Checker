@@ -13,10 +13,6 @@ def check_length(pswd):
     return False
         
 
-
-
-
-
 def check_upper(pswd):
     for char in pswd:
         if char in UPPER:
@@ -24,8 +20,6 @@ def check_upper(pswd):
 
     return False
     
-
-
 
 def check_lower(pswd):
     for char in pswd:
