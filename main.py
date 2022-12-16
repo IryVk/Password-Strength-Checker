@@ -7,23 +7,11 @@ def main():
     password = input("Password: ")
 
     # Get errors and strength index
-    errors, index = calc_strength(username, password)
+    errors, strength = calc_strength(username, password)
 
     # Print any errors to guide the user
     for error in errors:
         print(error)
-
-    # Decides strength based on the strength index
-    if 0 <= index <= 5:
-        strength = "Very Weak"
-    elif 6 <= index <= 9:
-        strength = "Weak"
-    elif 10 <= index <= 12:
-        strength = "Moderate"
-    elif 13 <= index <= 14:
-        strength = "Strong"
-    else:
-        strength = "Very Strong"
 
     print(f"Password is {strength}.")
 
@@ -84,7 +72,23 @@ def calc_strength(usr, pswd):
     else:
         str_index += 4
 
-    return errors, str_index
+    # Print any errors to guide the user
+    for error in errors:
+        print(error)
+
+    # Decides strength based on the strength index
+    if 0 <= str_index <= 5:
+        strength = "Very Weak"
+    elif 6 <= str_index <= 9:
+        strength = "Weak"
+    elif 10 <= str_index <= 12:
+        strength = "Moderate"
+    elif 13 <= str_index <= 14:
+        strength = "Strong"
+    else:
+        strength = "Very Strong"
+
+    return errors, strength
 
 
 if __name__ == "__main__":
