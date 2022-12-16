@@ -2,39 +2,37 @@ from validation import *
 
 
 def main():
+    # Gets username and password from user
     username = input("Username: ")
     password = input("Password: ")
 
+    # Get errors and strength index
     errors, index = calc_strength(username, password)
 
+    # Print any errors to guide the user
     for error in errors:
         print(error)
-    
+
+    # Decides strength based on the strength index
     if 0 <= index <= 5:
         strength = "Very Weak"
-
     elif 6 <= index <= 9:
         strength = "Weak"
-
     elif 10 <= index <= 12:
         strength = "Moderate"
-
     elif 13 <= index <= 14:
         strength = "Strong"
-
     else:
         strength = "Very Strong"
 
     print(f"Password is {strength}.")
 
 
-
-
 # Checks strength of password
 def calc_strength(usr, pswd):
     errors = []  # Errors to guide users
     str_index = 0  # Strength index to judge password
-    
+
     # Length
     if not check_length(pswd):
         errors.append("Password is less than 8 characters.")
@@ -65,7 +63,9 @@ def calc_strength(usr, pswd):
 
     # Special Chars
     if not check_special(pswd):
-        errors.append("Password does not contain any special characters from the following: !@#$%^&*()-+.")
+        errors.append(
+            "Password does not contain any special characters from the following: !@#$%^&*()-+."
+        )
         str_index += 0
     else:
         str_index += 2
@@ -85,7 +85,7 @@ def calc_strength(usr, pswd):
         str_index += 4
 
     return errors, str_index
-    
+
 
 if __name__ == "__main__":
     main()
