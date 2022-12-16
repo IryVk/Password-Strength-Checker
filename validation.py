@@ -6,7 +6,6 @@ LOWER = "abcdefghijklmnopqrstuvwxyz"
 def main():
     ...
 
-
 def check_length():
     ...
 
@@ -28,8 +27,15 @@ def check_special():
 
 
 # TO-DO
-def check_unique():
-    ...
+def check_unique(usr, pswd):
+    for i in range(len(pswd)):
+        try:
+            if pswd[i:i+4] in usr:
+                return False
+        except IndexError:
+            break
+
+    return True
 
 
 def check_common():
