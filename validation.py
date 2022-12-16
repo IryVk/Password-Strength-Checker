@@ -3,40 +3,35 @@ UPPER = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 LOWER = ("abcdefghijklmnopqrstuvwxyz")
 
 def main():
-    password = input("Password: ")
-    print(check_common(password))
+    ...
 
-def check_length(pss):
-
-    L = len(pss)
-    if L >= 8:
-        print("good len ")
+def check_length(pswd):
+    l = len(pswd)
+    if l >= 8:
         return True
-    else:
-        return False
+
+    return False
         
 
 
 
 
 
-def check_upper(pss):
-    for ad in (pss):
-        L = UPPER
-        if ad in L:
-            print("it has upper")
+def check_upper(pswd):
+    for char in pswd:
+        if char in UPPER:
             return True
+
     return False
     
 
 
 
-def check_lower(pss):
-    for ad in (pss):
-        L = LOWER
-        if ad in L:
-            print("it has lower ") 
+def check_lower(pswd):
+    for char in pswd:
+        if char in LOWER:
             return True
+
     return False
 
 
