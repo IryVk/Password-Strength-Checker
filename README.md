@@ -1,5 +1,5 @@
 # coursework-2-webarebears
-###### CW 1 for programming &amp; algorithms 1 module
+###### CW 2 for Programming &amp; Algorithms 1 module
 
 <a name="readme-top"></a>
 
@@ -13,17 +13,9 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -32,8 +24,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This program can encrypt/decrypt text using multiple ciphers: Caesar, Vigenere, Autokey, Playfair and Railfence. The program can encrypt and decrypt text from files or user input, generate secure random keys, and output text files to store encrypted/decrypted text and generated keys.
-Each cipher can be run by itself using the corresponding `CIPHERNAME.py` file, or by using `main.py` and providing command line arguments to run the desired cipher.
+This program can measure the strength of a password by calculating a strength index that depends on multiple factors including: password length, whether it includes an uppercase or lower character, a number and a special character, whether it is a commonly used password, and if it contains any repeated patterns/sequence of characters from the username.
+The program will output the strength of the password, and the vulnerabilities found.
+
+The functions used can be found in `validation.py`, running it does not give an output. The program is can be used by running `password.py`.
 
 https://user-images.githubusercontent.com/114566375/200607249-531db7af-9d40-419f-9753-e043ebf9f0cb.mp4
 
@@ -61,7 +55,7 @@ https://user-images.githubusercontent.com/114566375/200607249-531db7af-9d40-419f
    ```sh
    Username: ######
    ```
-3. Afterwards, the user will be prompted to enter their password. If they enter a password less than 3 characters long, the program will raise a `alueError` and reprompt the user for their password.
+3. Afterwards, the user will be prompted to enter their password. If they enter a password less than 3 characters long, the program will raise a `ValueError` and reprompt the user for their password.
    ```sh
    Password: **
    Password is too short, please enter at least 3 characters.
@@ -86,21 +80,28 @@ _For more examples, please refer to the [Documentation](https://github.com/Coven
 
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- FEATURES -->
+## Features
 
 - [ ] 
-Encrypt/decrypt text using 5 different ciphers.
-    - [ ] 
-    Encrypt/decrypt text of any length, including numbers and special characters.
+Runs a list of checks:
+  - [ ] 
+  Checks if password contains at least one uppercase letter.
+  - [ ] 
+  Checks if password contains at least one lowercase letter.
+  - [ ] 
+  Checks if password contains at least number.
+  - [ ] 
+  Checks if password contains at least one special character from the following: !@#$%^&*()-+.
 - [ ] 
-Encrypt/decrypt text from user input.
+Compares password with a database of commonly used passwords.
 - [ ] 
-Read text from a file and output text to a new file.
+Compares password with username to find any repeated sequence.
 - [ ] 
-Generate secure random keys.
-    - [ ] 
-    Store keys in separate text files.
+Calculates strength index based on all the checks.
+- [ ] 
+Compiles a list of vulnerabilities found in the password.
+
 
 See the [open issues](https://github.com/Coventry-TKH/coursework-2-webarebears/issues) for a full list of proposed features (and known issues).
 
@@ -112,7 +113,9 @@ See the [open issues](https://github.com/Coventry-TKH/coursework-2-webarebears/i
 ## Contact
 
 Arwa Essam Abdelaziz - aa2101585@tkh.edu.eg
+
 Begad Hatem Diab - bd2101453@tkh.edu.eg
+
 Adham Heshame Mounir - am2101322@tkh.edu.eg
 
 Project Link: [https://github.com/Coventry-TKH/coursework-2-webarebears](https://github.com/Coventry-TKH/coursework-2-webarebears)
