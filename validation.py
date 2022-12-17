@@ -6,8 +6,7 @@ LOWER = "abcdefghijklmnopqrstuvwxyz"
 
 # A temporary main function to test our checks
 def main():
-    password = input("Password: ")
-    print(check_seq(password))
+    ...
 
 
 # Checks if password is at least 8 characters long
@@ -58,11 +57,11 @@ def check_unique(usr, pswd):
     return True
 
 
-# Checks if passowrd is not in list of common passwords
+# Checks if passowrd is not in list of common 100,000 passwords
 def check_common(pswd):
     # Load list of common passwords in memory
     common = []
-    with open("common.txt") as file:
+    with open("common_large.txt") as file:
         for line in file:
             common.append(line.rstrip())
 
@@ -132,7 +131,6 @@ def calc_strength(usr, pswd):
     else:
         str_index += 2
 
-
     # Sequence or pattern
     if not check_seq(pswd):
         errors.append("Password contains a repeated pattern/characters in sequence.")
@@ -146,7 +144,6 @@ def calc_strength(usr, pswd):
         str_index += 0
     else:
         str_index += 4
-
 
     # Decides strength based on the strength index
     if 0 <= str_index <= 7:
