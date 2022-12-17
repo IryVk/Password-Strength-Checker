@@ -27,9 +27,13 @@
 This program can measure the strength of a password by calculating a strength index that depends on multiple factors including: password length, whether it includes an uppercase or lower character, a number and a special character, whether it is a commonly used password, and if it contains any repeated patterns/sequence of characters from the username.
 The program will output the strength of the password, and the vulnerabilities found.
 
-The functions used can be found in `validation.py`, running it does not give an output. The program is can be used by running `password.py`.
+The functions used can be found in `validation.py`, running it does not give an output. The program can be used by running `password.py`.
 
-https://user-images.githubusercontent.com/114566375/200607249-531db7af-9d40-419f-9753-e043ebf9f0cb.mp4
+
+
+https://user-images.githubusercontent.com/114566375/208256161-96c8b307-8161-4487-84b0-873b5266d157.mp4
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,18 +65,19 @@ https://user-images.githubusercontent.com/114566375/200607249-531db7af-9d40-419f
    Password is too short, please enter at least 3 characters.
    Password: *********
    ```
-4. Finally, the program will output the password strength, and guide the users about any vulnerabilities found in their password.
+4. Finally, the program will output the password strength, and guide the user about any vulnerabilities found in their password.<br>
+Running example:
    ```sh
-   ex:
-   python password.py
+   coursework-2-webarebears> python password.py
    Username: John Smith
    Password: Smith75
    Password is less than 8 characters.
-   Password does not contain any special characters from the following: !@#$%^&*()-+.
+   Password does not contain any special characters from the following: !@#$%^&*()-+.  
    Password should not contain sequences from your username.
    Password is Weak.
    ```
-Note: Do not run `validate.py` as it does not give an output.
+   <br>
+Note: Do not run `validate.py` as it does not give an output.<br>
 _For more examples, please refer to the [Documentation](https://github.com/Coventry-TKH/coursework-2-webarebears/files/9970925/LINKNEWREPORT)_
 
 
@@ -135,5 +140,5 @@ Project Link: [https://github.com/Coventry-TKH/coursework-2-webarebears](https:/
 [issues-url]: https://github.com/Coventry-TKH/coursework-2-webarebears/issues
 [license-shield]: https://img.shields.io/github/license/Coventry-TKH/coursework-2-webarebears.svg?style=for-the-badge
 [license-url]: https://github.com/Coventry-TKH/coursework-2-webarebears/blob/master/LICENSE.txt
-[Python.js]: https://img.shields.io/badge/python-3.0-pink
+[Python.js]: https://img.shields.io/badge/python-3.2-pink
 [Python-url]: https://www.python.org/
