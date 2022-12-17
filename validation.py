@@ -90,28 +90,24 @@ def calc_strength(usr, pswd):
     # Length
     if not check_length(pswd):
         errors.append("Password is less than 8 characters.")
-        str_index += 0
     else:
         str_index += 3
 
     # Uppercase
     if not check_upper(pswd):
         errors.append("Password does not contain any uppercase letters.")
-        str_index += 0
     else:
         str_index += 1
 
     # Lowercase
     if not check_lower(pswd):
         errors.append("Password does not contain any lowercase letters.")
-        str_index += 0
     else:
         str_index += 1
 
     # Numbers
     if not check_digit(pswd):
         errors.append("Password does not contain any numbers.")
-        str_index += 0
     else:
         str_index += 2
 
@@ -120,28 +116,24 @@ def calc_strength(usr, pswd):
         errors.append(
             "Password does not contain any special characters from the following: !@#$%^&*()-+."
         )
-        str_index += 0
     else:
         str_index += 2
 
     # Similar to username
     if not check_unique(usr, pswd):
         errors.append("Password should not contain sequences from your username.")
-        str_index += 0
     else:
         str_index += 2
 
     # Sequence or pattern
     if not check_seq(pswd):
         errors.append("Password contains a repeated pattern/characters in sequence.")
-        str_index += 0
     else:
         str_index += 2
 
     # Common Password
     if not check_common(pswd):
         errors.append("Password is a commonly used password.")
-        str_index += 0
     else:
         str_index += 4
 
