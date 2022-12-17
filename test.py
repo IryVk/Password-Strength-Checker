@@ -3,28 +3,25 @@ import unittest
 from validation import *
 
 
-def test_code(self):
- #test cass one (noaccebtable passwords)
-    self.assertEqual(calc_strength("work@gmail.com", "i_love_you@2"), 
-    (["Password is too short, please enter at least 3 characters."], "Password is too short, please enter at least 3 characters."), "it is not correct")
-      
+class test_code(unittest.TestCase):
+    def testcase1(self):
 #tast cass one (very week passwords)
     # this password is the same as the username  
-    self.assertEqual(calc_strength("adham", "adham"), 
-    (["Password is less than 8 characters",
-    "Password does not contain any uppercase letters",
-    "Password does not contain any numbers",
-    "Password does not contain any special characters from the following: !@#$%^&*()-+",
-    "Password should not contain sequences from your username"], "Password is Very Weak."), "it is not correct")
+        self.assertEqual(calc_strength("adham", "adham"), 
+        (["Password is less than 8 characters.",
+        "Password does not contain any uppercase letters.",
+        "Password does not contain any numbers.",
+        "Password does not contain any special characters from the following: !@#$%^&*()-+.",
+        "Password should not contain sequences from your username."], "Very Weak"), "it is not correct")
 
     #this password altho deferen it is still within the user mane and it is a comenly used password as well 
-    self.assertEqual(calc_strength("spidermanfan", "spiderman"), 
-    (["Password is less than 8 characters",
-    "Password does not contain any uppercase letters",
-    "Password does not contain any numbers",
-    "Password does not contain any special characters from the following: !@#$%^&*()-+",
-    "Password should not contain sequences from your username",
-    "Password is a commonly used password"], "Password is Very Weak."), "it is not correct")
+        self.assertEqual(calc_strength("spidermanfan", "spiderman"), 
+        (["Password is less than 8 characters",
+        "Password does not contain any uppercase letters",
+        "Password does not contain any numbers",
+        "Password does not contain any special characters from the following: !@#$%^&*()-+",
+        "Password should not contain sequences from your username",
+        "Password is a commonly used password"], "Password is Very Weak."), "it is not correct")
 
 
 #test cass two(weak passwords)
