@@ -3,7 +3,49 @@ import unittest
 from validation import *
 
 
-class test_code(unittest.TestCase):
+class test_methods(unittest.TestCase):
+    # Test the length check
+    def test_length(self):
+        self.assertTrue(check_length("12345678"))
+        self.assertFalse(check_length("1234"))
+
+    # Test the uppercase check
+    def test_upper(self):
+        self.assertTrue(check_upper("Abcde"))
+        self.assertFalse(check_upper("abcde"))
+
+    # Test the lowercase check
+    def test_lower(self):
+        self.assertTrue(check_lower("abcde"))
+        self.assertFalse(check_lower("ABCDE"))
+
+    # Test the digits check
+    def test_digit(self):
+        self.assertTrue(check_digit("12345"))
+        self.assertFalse(check_digit("abcde"))
+
+    # Test the special check
+    def test_special(self):
+        self.assertTrue(check_special("abcde#@!"))
+        self.assertFalse(check_special("abcde"))
+
+    # Test the unique from username check
+    def test_unique(self):
+        self.assertTrue(check_unique("username","password"))
+        self.assertFalse(check_unique("username","username123"))
+    
+    # Test if common password check
+    def test_common(self):
+        self.assertTrue(check_common("AbDer1#__0!"))
+        self.assertFalse(check_common("1234"))
+
+    # Test the sequence/pattern check
+    def test_seq(self):
+        self.assertTrue(check_seq("BIK076#@"))
+        self.assertFalse(check_seq("Arwa123"))
+
+
+class test_strength(unittest.TestCase):
     def testcase1(self):  # Very weak passwords
         # Password same as username
         self.assertEqual(
