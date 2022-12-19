@@ -25,7 +25,7 @@
 ## About The Project
 
 This program can measure the strength of a password by calculating a strength index that depends on multiple factors including: password length, whether it includes an uppercase or lower character, a number and a special character, whether it is a commonly used password, and if it contains any repeated patterns/sequence of characters from the username.
-The program will output the strength of the password, and the vulnerabilities found.
+<br>The program outputs the strength of the password, and the vulnerabilities found.
 
 The functions used can be found in `validation.py`, running it does not give an output. The program can be used by running `password.py`.
 
