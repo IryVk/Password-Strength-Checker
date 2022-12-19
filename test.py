@@ -31,9 +31,9 @@ class test_methods(unittest.TestCase):
 
     # Test the unique from username check
     def test_unique(self):
-        self.assertTrue(check_unique("username","password"))
-        self.assertFalse(check_unique("username","username123"))
-    
+        self.assertTrue(check_unique("username", "password"))
+        self.assertFalse(check_unique("username", "username123"))
+
     # Test if common password check
     def test_common(self):
         self.assertTrue(check_common("AbDer1#__0!"))
