@@ -11,6 +11,7 @@ def main():
 
 # Checks if password is at least 8 characters long
 def check_length(pswd):
+    """Takes password as argument and returns True if it is longer than 8 characters"""
     l = len(pswd)
     if l >= 8:
         return True
@@ -19,6 +20,7 @@ def check_length(pswd):
 
 # Checks if password contains a uppercase character
 def check_upper(pswd):
+    """Takes password as argument and returns True if it contains at least one upper character"""
     for char in pswd:
         if char in UPPER:
             return True
@@ -27,6 +29,7 @@ def check_upper(pswd):
 
 # Checks if password contains a lowercase character
 def check_lower(pswd):
+    """Takes password as argument and returns True if it contains at least one lower character"""
     for char in pswd:
         if char in LOWER:
             return True
@@ -35,6 +38,7 @@ def check_lower(pswd):
 
 # Checks if password contains number
 def check_digit(pswd):
+    """Takes password as argument and returns True if it contains at least one number"""
     for char in pswd:
         if char.isdigit():
             return True
@@ -42,8 +46,9 @@ def check_digit(pswd):
 
 
 # Checks if password contains special characters
-def check_special(password):
-    for char in password:
+def check_special(pswd):
+    """Takes password as argument and returns True if it contains at least one special character"""
+    for char in pswd:
         if char in SPECIAL:
             return True
     return False
@@ -51,6 +56,7 @@ def check_special(password):
 
 # Checks if password does not contain sequence in user-name
 def check_unique(usr, pswd):
+    """Takes username and password as arguments and returns True if password does not contain sequence from username"""
     for i in range(len(pswd) - 4):
         if pswd[i : i + 4].lower() in usr.lower():
             return False
@@ -59,6 +65,7 @@ def check_unique(usr, pswd):
 
 # Checks if passowrd is not in list of common 100,000 passwords
 def check_common(pswd):
+    """Takes password as argument and returns True if is not on the list of common passwords"""
     # Load list of common passwords in memory
     common = []
     with open("common_large.txt") as file:
@@ -74,6 +81,7 @@ def check_common(pswd):
 
 # Check if there's a sequence or pattern in characters such as : 123 , 369, abc etc.
 def check_seq(pswd):
+    """Takes password as argument and returns True if it does not contain a sequence/pattern"""
     pswd = pswd.lower()
     for i in range(len(pswd) - 2):
         # Checks if no 3 characters are in a sequence/have a pattern
@@ -84,6 +92,7 @@ def check_seq(pswd):
 
 # Checks strength of password
 def calc_strength(usr, pswd):
+    """Takes username and password as arguments and returns a list of strings (errors in the password) and a single string (the strength of the password)"""
     errors = []  # Errors to guide users
     str_index = 0  # Strength index to judge password
 
