@@ -90,7 +90,7 @@ _For more examples, please refer to the [Documentation](https://github.com/Coven
 
 - [ ] 
 Runs a list of checks:
-  - [ ] 
+  - [x] 
   Checks if password contains at least one uppercase letter.
   - [ ] 
   Checks if password contains at least one lowercase letter.
