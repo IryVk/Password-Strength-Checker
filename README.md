@@ -1,5 +1,5 @@
 # coursework-2-webarebears
-###### CW 2 for Programming &amp; Algorithms 1 module
+###### KH4061CEM Programming and Algorithms 1                      
 
 <a name="readme-top"></a>
 
