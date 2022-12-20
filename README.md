@@ -78,7 +78,7 @@ Running example:
    ```
    <br>
 Note: Do not run `validate.py` as it does not give an output.<br>
-_For more examples, please refer to the [Documentation](https://github.com/Coventry-TKH/coursework-2-webarebears/files/9970925/LINKNEWREPORT)_
+_For more examples, please refer to the [Documentation](https://github.com/Coventry-TKH/coursework-2-webarebears/files/10263577/Course-Work-2-Report.pdf)_
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
