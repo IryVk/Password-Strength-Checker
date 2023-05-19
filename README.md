@@ -1,5 +1,5 @@
-# coursework-2-webarebears
-###### KH4061CEM Programming and Algorithms 1                      
+# Password Strength Checker
+###### KH4061CEM Programming and Algorithms 1 at TKH-Coventry                      
 
 <a name="readme-top"></a>
 
@@ -31,7 +31,11 @@ The functions used can be found in `validation.py`, running it does not give an 
 
 
 
-https://user-images.githubusercontent.com/114566375/208256161-96c8b307-8161-4487-84b0-873b5266d157.mp4
+
+
+https://github.com/IryVk/Password-Strength-Checker/assets/114566375/0ca2ba0c-631a-4a18-966c-da25939d1ab3
+
+
 
 
 
